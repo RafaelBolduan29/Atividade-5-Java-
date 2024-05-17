@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class EstoqueMedio {
+    public static void main(String[] args) {
+        // Cria um objeto Scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita ao usuário a quantidade mínima do estoque
+        System.out.print("Digite a quantidade mínima do estoque: ");
+        double quantidadeMinima = scanner.nextDouble();
+        
+        // Solicita ao usuário a quantidade máxima do estoque
+        System.out.print("Digite a quantidade máxima do estoque: ");
+        double quantidadeMaxima = scanner.nextDouble();
+        
+        // Calcula o estoque médio
+        double estoqueMedio = calcularEstoqueMedio(quantidadeMinima, quantidadeMaxima);
+        
+        // Exibe o resultado
+        System.out.printf("O estoque médio é: %.2f\n", estoqueMedio);
+        
+        // Fecha o scanner para liberar os recursos
+        scanner.close();
+    }
+    
+    /**
+     * Calcula o estoque médio com base nas quantidades mínima e máxima fornecidas.
+     *
+     * @param quantidadeMinima A quantidade mínima do estoque.
+     * @param quantidadeMaxima A quantidade máxima do estoque.
+     * @return O estoque médio.
+     */
+    public static double calcularEstoqueMedio(double quantidadeMinima, double quantidadeMaxima) {
+        // Calcula e retorna o estoque médio
+        return (quantidadeMinima + quantidadeMaxima) / 2;
+    }
+}
